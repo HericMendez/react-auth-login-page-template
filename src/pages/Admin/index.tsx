@@ -6,6 +6,7 @@ const Admin = () => {
 
     return (
         <div>
+                   <br/>
             <h2>Página Privada</h2>
 
             Olá {auth.user?.name}, tudo bem?

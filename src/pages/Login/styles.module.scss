@@ -1,0 +1,27 @@
+@import "../../abstract/_mixins";
+@import "../../abstract/_variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  .login_box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 25vw;
+    min-width: 200px;
+    height: fit-content;
+    background-color: #222;
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.53);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.53);
+
+    input {
+      margin: 10px;
+      padding: 8px 12px;
+      border-radius: 20px;
+    }
+  }
+}

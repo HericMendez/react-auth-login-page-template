@@ -1,0 +1,19 @@
+@import './variables';
+body {
+
+    height: 100vh;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-top: 10vh;
+    
+    font-family: "Source Sans Pro", sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  

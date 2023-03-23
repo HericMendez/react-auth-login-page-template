@@ -1,17 +1,16 @@
 import "./App.css";
-import AppRoutes from "./routes";
-import Header from "./components/Header";
-
+import PageRoutes from "./routes";
+import Navbar from "./components/Navbar";
+import { useTheme } from "./contexts/Theme/ThemeContext";
 function App() {
-
-
-
-
+  const { theme } = useTheme();
   return (
-    <div className="App">
-     <Header/>
-    <AppRoutes />
-     
+
+    <div className={"App"}  style={{
+      ...theme
+    } as React.CSSProperties}>
+      <Navbar />
+      <PageRoutes />
     </div>
   );
 }

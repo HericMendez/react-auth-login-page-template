@@ -1,7 +1,7 @@
 import { ChangeEvent, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/Auth/AuthContext";
-
+import styles from './styles.module.css'
 export const Login = () => {
     const auth = useContext(AuthContext);
     const navigate = useNavigate();
@@ -29,25 +29,27 @@ export const Login = () => {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
+                 <br/>
             <h2>Bem-vindo!</h2>
-
+            <div className={styles.login_box}>
             <input
                 type="text"
                 value={email}
                 onChange={handleEmailInput}
                 placeholder="Digite seu e-mail"
             />
-            <br/>
-            <br/>
+ 
+  
             <input
                 type="password"
                 value={password}
                 onChange={handlePasswordInput}
                 placeholder="Digite sua senha"
-            />         <br/>
+            />       
                      <br/>
             <button onClick={handleLogin}>Logar</button>
+            </div>
         </div>
     );
 }

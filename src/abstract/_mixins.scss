@@ -1,0 +1,63 @@
+@import "./variables";
+
+@mixin flexbox($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+
+@mixin input_style() {
+  border: none;
+  border-bottom: 1px solid black;
+  color: #222;
+  background-color: #fff;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+@mixin submitBtn_style(){
+  height: 32px;
+  border-radius: 8px;
+  background-color: $secondary;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@mixin screen_s() {
+  @media screen and (max-width: $screen_s_width) {
+    @content;
+  }
+}
+
+@mixin screen_m() {
+  @media screen and (max-width: $screen_m_width) {
+    @content;
+  }
+}
+
+@mixin screen_l() {
+  @media screen and (max-width: $screen_l_width) {
+    @content;
+  }
+}
+
+@mixin screen_xl() {
+  @media screen and (max-width: $screen_xl_width) {
+    @content;
+  }
+}
+
+@mixin screen_custom($screen_size) {
+  @media screen and (max-width: $screen_size) {
+    @content;
+  }
+}
+

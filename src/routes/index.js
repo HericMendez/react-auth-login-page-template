@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import Admin from "../pages/Admin";
 import { RequireAuth } from "../contexts/Auth/RequireAuth";
 
-const AppRoutes = () => {
+const PageRoutes = () => {
   return (
     <Routes>
       <Route
@@ -26,4 +26,4 @@ const AppRoutes = () => {
   );
 };
 
-export default AppRoutes;
+export default PageRoutes;
