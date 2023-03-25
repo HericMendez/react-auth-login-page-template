@@ -40,7 +40,9 @@ const Navbar = () => {
           {auth.user && (
             <>
               <Link to="/">Home</Link>
-              <Link to="/admin">Dashboard</Link>
+              
+              <Link to="/gateways">Gateways</Link>
+              <Link to="/devices">Devices</Link>
               <Link to="/" onClick={handleLogout}>
                 Sair
               </Link>
@@ -78,10 +80,12 @@ const Navbar = () => {
             <GrClose size={20} />
           </button>
 
-          <nav className={styles.menu_list}>
-            <Link to="/">Home</Link>
-            <Link to="/admin">Dashboard</Link>
-            <Link to="/" onClick={handleLogout}>
+          <nav className={styles.menu_list} >
+            <Link  onClick={() => setIsShown(false)} to="/">Home</Link>
+            
+            <Link  onClick={() => setIsShown(false)} to="/gateways">Gateways</Link>
+            <Link  onClick={() => setIsShown(false)} to="/devices">Devices</Link>
+            <Link  to="/" onClick={handleLogout}>
               Sair
             </Link>
           </nav>

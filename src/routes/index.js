@@ -1,7 +1,8 @@
 import { Route, Routes, Link } from "react-router-dom";
-import Home from "../pages/Home";
-import Admin from "../pages/Admin";
 import { RequireAuth } from "../contexts/Auth/RequireAuth";
+import Home from "../pages/Home";
+import GatewayList from "../pages/Gateways";
+import DeviceList from "../pages/Devices";
 
 const PageRoutes = () => {
   return (
@@ -14,11 +15,21 @@ const PageRoutes = () => {
           </RequireAuth>
         }
       />
+
       <Route
-        path="/admin"
+        path="/gateways"
         element={
           <RequireAuth>
-            <Admin />
+            <GatewayList />
+          </RequireAuth>
+        }
+      />
+
+      <Route
+        path="/devices"
+        element={
+          <RequireAuth>
+            <DeviceList />
           </RequireAuth>
         }
       />
